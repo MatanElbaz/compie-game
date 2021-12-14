@@ -1,0 +1,20 @@
+<div class="leftSidebar">
+    <p> Player Name: {{playerName}} </p>
+    <p> Current Score: {{counter-1}} </p>
+    <p> Best Score: {{gameStateService.bestScore-1}}</p>
+</div>
+
+
+<div class="container">
+    <div class="flex middle">
+        <app-bulbs [active]="colors.red" color="red" (guess)="playerGuess($event)"></app-bulbs>
+        <app-bulbs [active]="colors.blue" color="blue" (guess)="playerGuess($event)"></app-bulbs>
+        <app-bulbs [active]="colors.green" color="green" (guess)="playerGuess($event)"></app-bulbs>
+    </div>
+    <div class="flex middle">
+        <app-bulbs [active]="colors.yellow" color="yellow" (guess)="playerGuess($event)"></app-bulbs>
+        <app-bulbs [active]="colors.purple" color="purple" (guess)="playerGuess($event)"></app-bulbs>
+        <app-bulbs [active]="colors.orange" color="orange" (guess)="playerGuess($event)"></app-bulbs>
+    </div>
+
+</div>
